@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.headertext {
+    font-size: 30px;
+}
+
 .startbutton {
     padding: 10px;
     margin: 24px;
