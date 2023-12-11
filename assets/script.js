@@ -4,7 +4,7 @@ function setTime() {
         
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            prompt("time is up!");
+            send("time is up!");
         }
     }, 5);
 }
