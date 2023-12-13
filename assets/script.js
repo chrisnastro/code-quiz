@@ -41,3 +41,22 @@ function showQuestions(index) {
             choice[i].setAttribute("onclick", "choiceSelected(this)");
         }
 }
+
+function questionAnswered(answer){
+    if (queCount>=10){
+        return;
+    }
+    let userAnswer = answer.textContent;
+    let rightAnswer = questions[queCount].answer;
+    if(userAnswer == rightAnswer){
+        const response = document.querySelector("#response");
+        response.innerHTML = '<div id="response"><span>Correct!</span</div>';
+        setTimeout(nextQuestion, 500)
+        score += 1
+    } else {
+        const response = document.querySelector("#response");
+        response.innerHTML = '<div id="response"><span>Incorrect!</span</div>';
+        setTimeout(nextQuestion, 500)
+        counter -= 5
+    }
+}
