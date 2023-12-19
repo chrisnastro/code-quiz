@@ -60,3 +60,21 @@ function questionAnswered(answer){
         counter -= 5
     }
 }
+function nextQuestion(){
+    queCount++;
+    if(queCount == 10){
+        quizOver()
+    };
+    showQuestions(queCount);
+    const response = documnent.querySelector("#response");
+    response.innerHTML = '<div id="response"><span></span></div>';
+}
+
+function quizEnd(){
+    questionBox.classList.add("hide");
+    finish.classList.remove("hide");
+    const score = document.querySelector(".score");
+    let scoreTag = '<h3 class="score"> Your score was '+ score +'out of 10!</h3>';
+    score.innerHTML = scoreTag;
+}
+
