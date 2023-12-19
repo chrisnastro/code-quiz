@@ -78,3 +78,13 @@ function quizEnd(){
     score.innerHTML = scoreTag;
 }
 
+scoreButton.onclick = () => {
+    let initials = initialsText.value;
+    var resultsData = {
+        initials: initials,
+        score: score
+    }
+    localStorage.setItem((localStorage.length+1), JSON.stringify(resultsData));
+    initialsText.value = ""
+    location.reload();
+}
