@@ -88,3 +88,13 @@ scoreButton.onclick = () => {
     initialsText.value = ""
     location.reload();
 }
+
+const scoreList = document.querySelector("#scorelist");
+let scoreListObj = '';
+
+for (let i = 0; i < localStorage.length; i++) {
+    scoreData = JSON.parse(localStorage.getItem(i+1));
+    scoreListObj = scoreListObj.concat('</br><div id="scorelist">'+ scoreData.initials + " "+"-"+" " + scoreData.score +'</div>')
+};
+
+scoreList.innerHTML = scoreListObj;
