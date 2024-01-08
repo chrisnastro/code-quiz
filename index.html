@@ -15,55 +15,52 @@
 
 <body>
     <header class=>
-        <div class="title">Code Quiz<a href="highscore.html" class="highscores float-end">View Highscores</a>
-        </div>
+        <div class="title">Coding Quiz Game<a href="highscores.html" class="highscores float-end">View Highscores</a></div>
     </header>
-
-
-    <main class="container poisition-relative">
-        <div id="start" class="text-center">
-            <h1>Code Quiz</h1>
-            <button type="button" class="buttons mt-5" id="startbutton">Start Quiz</button>
+    <main class="container position-relative">
+        <div id="start" class="hide text-center">
+            <h1>Coding Quiz Game</h1>
+            <button type="button" class="buttons mt-5" id="start-btn">Start!</button> 
         </div>
-        <div id="rulesbox" class="rules mt-5" style="width: auto">
-            <div class="ruletitle">Quiz Rules</div>
-            <div class="rules">
-                <div class="rule">Rule 1. You have one minute to complete the quiz.</div>
-                <div class="rule">Rule 2. Incorrect answers result in a time penalty of 5 seconds.</div>
+        <div id="rules" class="info-box mt-5" style="width: auto" >
+            <div class="info-title">Coding Quiz Rules</div>
+            <div class="info-list">
+                <div class="info">1. You only have <span>60 seconds</span> to finish 10 questions.</div>
+                <div class="info">2. You cannot go back to a previous question.</div>
+                <div class="info">3. If you answer a question incorrectly, you are penalized 5 seconds.</div>
+            </div>
+            <div class="buttons">
+                <button class="restart btn btn-primary btn-sm">Continue</button>
             </div>
         </div>
-        <section id="questionbox" class="hide row quiz-box mt-5" style="width: auto">
-            <div id="timeleft">
-                <span>Time Remaining: 60</span>
-            </div>
-            <h1 class="questions">
+        <section id="questions" class="hide row quiz-box mt-5" style="width: auto">
+            <div id="time-rem">
+                <span>Time Left: 60</span>
+            </div>   
+            <h1 class="que-text">
                 <span></span>
             </h1>
             <div id="choices" class="flex-direction">
-                <div class="answer"><span></span></div>
-                <div class="answer"><span></span></div>
-                <div class="answer"><span></span></div>
-                <div class="answer"><span></span></div>
+                    <div class="option"><span></span></div>
+                    <div class="option"><span></span></div>
+                    <div class="option"><span></span></div>
+                    <div class="option"><span></span></div>
             </div>
             <div id="response">
                 <span></span>
             </div>
         </section>
-        <div id="finish" class="hide text-center p-5">
-            <div class="flex direction">
-                <h1>Good Job!</h1>
-                <h3 class="score hide"></h3>
-                <h2>Enter Your Initials:</h2>
+        <div id="quiz-end" class="hide text-center p-5">
+            <div class="flex-direction flex-direction"><h1>End of Quiz!</h1>
+                <h3 class="score"></h3>
+                <h2>Enter Initials:</h2>
                 <input type="text" id="initials" class="mt-1">
-                <button id="scorebutton">Submit</button>
+                <button id="save-score">Submit</button>
             </div>
         </div>
-
     </main>
-
-
-    <script src="./assets/questions.js"></script>
-    <script src="./assets/script.js"></script>
+    <script src="assets/questions.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
