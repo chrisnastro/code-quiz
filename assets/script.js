@@ -1,11 +1,13 @@
-var startButton = document.getElementById("startbutton");
-var rulesBox = document.getElementById("rulesbox");
-var questionBox = document.getElementById("questionbox");
-var finish = document.getElementById("finish");
-var scoreButton = document.getElementById("scorebutton");
-var initials = document.getElementById("initials");
+var startScreen = document.querySelector("#start");
+var startButton = document.querySelector("#startbutton");
+var rulesBox = document.querySelector(".rulesbox");
+var questionBox = document.querySelector(".quiz-box");
+var finish = document.querySelector("#finish");
+var scoreButton = document.querySelector("#scorebutton");
+var initials = document.querySelector("#initials");
 var queCount = 0;
 var counter = 60;
+var score = 0;
 
 startButton.onclick = () => {
     function countdown() {
@@ -19,6 +21,7 @@ startButton.onclick = () => {
         timeRemaining.innerHTML = timeTag;
     };
     var startTimer = setInterval(countdown, 1000);
+    startScreen.classList.add("hide");
     questionBox.classList.remove("hide");
     showQuestions(queCount)
 };
